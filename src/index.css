@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FDFBF7;
+    color: #2D3748;
+}
+.font-serif-title {
+    font-family: 'Playfair Display', serif;
+}
+/* Custom transitions */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Shimmer effect for WhatsApp button */
+@keyframes pulse-soft {
+    0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(58, 79, 63, 0.2); }
+    50% { transform: scale(1.03); box-shadow: 0 10px 25px rgba(58, 79, 63, 0.35); }
+}
+.pulse-btn {
+    animation: pulse-soft 3s infinite;
+}
