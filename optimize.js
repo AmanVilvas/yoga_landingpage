@@ -13,9 +13,10 @@ async function optimizeImages() {
       const newFileName = file.replace(/\.(jpg|JPG|png)$/, '.webp');
       const outputPath = path.join(dir, newFileName);
       
-      console.log(`Optimizing ${file}...`);
+      console.log(`Re-optimizing ${file} to fix rotation...`);
       try {
         await sharp(inputPath)
+          .rotate() // Auto-orients based on EXIF data
           .resize({ width: 1200, withoutEnlargement: true })
           .webp({ quality: 80 })
           .toFile(outputPath);
