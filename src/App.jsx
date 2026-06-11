@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 // Importing assets
-import imgHero from './assets/330A5622.JPG';
-import imgCoach from './assets/330A5560.JPG';
-import imgBenefits from './assets/330A5601.JPG';
-import imgSmallBatch from './assets/330A5594.JPG';
-import imgHowItWorks from './assets/330A5603.JPG';
-import imgPricing from './assets/330A5563.JPG';
+import imgHero from './assets/330A5622.webp';
+import imgCoach from './assets/330A5560.webp';
+import imgBenefits from './assets/330A5601.webp';
+import imgSmallBatch from './assets/330A5594.webp';
+import imgHowItWorks from './assets/330A5603.webp';
+import imgPricing from './assets/330A5563.webp';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -158,7 +158,8 @@ function App() {
                 <div className="relative bg-white p-3 rounded-[2.5rem] shadow-2xl border border-white/50">
                   <img src={imgHero} 
                        alt="Women practicing yoga at home" 
-                       className="rounded-[2rem] w-full h-[500px] object-cover" />
+                       className="rounded-[2rem] w-full h-[500px] object-cover"
+                       fetchPriority="high" />
                   
                   {/* Floating element */}
                   <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-xl border border-sageLight hidden md:block animate-bounce-slow">
@@ -217,7 +218,7 @@ function App() {
             
             <div className="order-2 lg:order-1 relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-sageMedium/20 to-transparent rounded-[3rem] blur-xl"></div>
-              <img src={imgPricing} alt="Yoga setup" className="relative rounded-[2rem] shadow-xl w-full h-[500px] object-cover border-4 border-white" />
+              <img src={imgPricing} alt="Yoga setup" className="relative rounded-[2rem] shadow-xl w-full h-[500px] object-cover border-4 border-white" loading="lazy" />
             </div>
 
             <div className="order-1 lg:order-2">
@@ -313,7 +314,7 @@ function App() {
       {/* 5. Benefits Section */}
       <section id="benefits" className="py-20 bg-sageDark text-warmIvory relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={imgBenefits} alt="Background" className="w-full h-full object-cover" />
+          <img src={imgBenefits} alt="Background" className="w-full h-full object-cover" loading="lazy" />
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -374,7 +375,7 @@ function App() {
 
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-bl from-accentGold/20 to-sageLight/40 rounded-[3rem] blur-xl"></div>
-              <img src={imgSmallBatch} alt="Small batch yoga focus" className="relative rounded-[2rem] shadow-2xl w-full h-[550px] object-cover" />
+              <img src={imgSmallBatch} alt="Small batch yoga focus" className="relative rounded-[2rem] shadow-2xl w-full h-[550px] object-cover" loading="lazy" />
             </div>
 
           </div>
@@ -387,7 +388,7 @@ function App() {
           <div className="bg-white rounded-[3rem] shadow-xl overflow-hidden border border-sageLight/50">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="h-[400px] md:h-auto relative">
-                <img src={imgCoach} alt="Coach Megha" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={imgCoach} alt="Coach Megha" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-10 md:p-16 flex flex-col justify-center">
                 <span className="text-xs font-bold uppercase tracking-widest text-accentGold">Your Guide</span>
